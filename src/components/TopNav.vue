@@ -1,6 +1,14 @@
+<script setup lang="ts">
+import { inject, Ref } from "vue";
+
+const menuVisible = inject<Ref<Boolean>>("menuVisible");
+const toggleMenu = () => {
+  menuVisible !== undefined && (menuVisible.value = !menuVisible.value);
+};
+</script>
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo" @click="toggleMenu">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -18,6 +26,7 @@
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    cursor: pointer;
   }
   > .menu {
     display: flex;

@@ -1,22 +1,27 @@
 <script setup lang="ts">
+import { inject, Ref } from "vue";
 import TopNav from "../components/TopNav.vue";
+
+const menuVisible = inject<Ref<Boolean>>("menuVisible");
 </script>
 
 <template>
-  <TopNav />
+  <top-nav />
   <div class="content">
-    <aside>
+    <aside v-if="menuVisible">
       <h2>组件列表</h2>
       <ol>
+        <li>{{ menuVisible }}</li>
+
         <li><RouterLink to="/doc/switch">Switch 组件</RouterLink></li>
         <li><RouterLink to="/doc/button">Button 组件</RouterLink></li>
         <li><RouterLink to="/doc/dialog">Dialog 组件</RouterLink></li>
         <li><RouterLink to="/doc/Tabs">Tabs 组件</RouterLink></li>
       </ol>
     </aside>
-    <mian>
+    <main>
       <RouterView />
-    </mian>
+    </main>
   </div>
 </template>
 <style lang="scss" scoped>

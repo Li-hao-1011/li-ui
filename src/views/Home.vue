@@ -3,7 +3,7 @@ import TopNav from "../components/TopNav.vue";
 </script>
 
 <template>
-  <TopNav />
+  <top-nav></top-nav>
   <div class="banner">
     <h1>LI-UI</h1>
     <h2>一个基于Vue3的UI组件库</h2>
