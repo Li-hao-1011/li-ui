@@ -11,8 +11,6 @@ const menuVisible = inject<Ref<Boolean>>("menuVisible");
     <aside v-if="menuVisible">
       <h2>组件列表</h2>
       <ol>
-        <li>{{ menuVisible }}</li>
-
         <li><RouterLink to="/doc/switch">Switch 组件</RouterLink></li>
         <li><RouterLink to="/doc/button">Button 组件</RouterLink></li>
         <li><RouterLink to="/doc/dialog">Dialog 组件</RouterLink></li>
