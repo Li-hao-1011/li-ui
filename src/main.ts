@@ -1,8 +1,8 @@
 import { createApp } from "vue";
-import "./style.css";
+import "./index.scss";
 import App from "./App.vue";
-import Lihao from "./components/Lihao.vue";
-import Lihao2 from "./components/Lihao2.vue";
+import Home from "./views/Home.vue";
+import Doc from "./views/Doc.vue";
 
 import { createWebHashHistory, createRouter } from "vue-router";
 
@@ -11,11 +11,11 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: Lihao,
+      component: Home,
     },
     {
-      path: "/2",
-      component: Lihao2,
+      path: "/doc",
+      component: Doc,
     },
   ],
 });
