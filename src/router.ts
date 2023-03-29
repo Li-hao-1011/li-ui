@@ -4,6 +4,7 @@ import Switch from "./components/Switch.vue";
 import Button from "./components/Button.vue";
 import Dialog from "./components/Dialog.vue";
 import Tabs from "./components/Tabs.vue";
+import DocIndex from './components/DocIndex.vue'
 
 import { createWebHashHistory, createRouter } from "vue-router";
 
@@ -17,8 +18,11 @@ export const router = createRouter({
     {
       path: "/doc",
       component: Doc,
-      redirect: "/doc/switch",
       children: [
+        {
+          path: "",
+          component: DocIndex,
+        },
         {
           path: "switch",
           component: Switch,
