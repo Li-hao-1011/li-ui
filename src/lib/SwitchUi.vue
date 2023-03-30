@@ -31,18 +31,19 @@ const toggle = () => {
 </script>
 <template>
   <button
+    class="liui-switch"
     :disabled="props.disabled"
     @click="toggle"
-    :class="{ checked: props.value, disabled: props.disabled }"
+    :class="{ 'liui-checked': props.value, 'liui-disabled': props.disabled }"
   >
     <!-- <span></span> -->
   </button>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: v-bind("switchSize[props.size]");
 $h2: calc(#{$h} - 4px);
-button {
+.liui-switch {
   height: $h;
   width: calc(#{$h} * 2);
   border: none;
@@ -53,13 +54,13 @@ button {
   &:focus {
     outline: none;
   }
-  &.checked {
+  &.liui-checked {
     background: blue;
     &::after {
       left: calc(100% - #{$h2} - 2px);
     }
   }
-  &.disabled {
+  &.liui-disabled {
     cursor: not-allowed;
     opacity: 0.4;
   }
