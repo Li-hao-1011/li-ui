@@ -54,4 +54,10 @@ const onMouse = () => {
       <ButtonUi level="danger" theme="text">你好 </ButtonUi>
     </div>
   </div>
+  <div>
+    <h2>示例4 disabled</h2>
+    <ButtonUi disabled>你好 </ButtonUi>
+    <ButtonUi :disabled="true" theme="link">你好 </ButtonUi>
+    <ButtonUi disabled theme="text">你好 </ButtonUi>
+  </div>
 </template>

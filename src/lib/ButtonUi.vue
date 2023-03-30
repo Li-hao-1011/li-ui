@@ -16,6 +16,7 @@ export default {
       type: String,
       default: "normal",
     },
+    disabled: { type: Boolean, default: false },
   },
   setup(props, context) {
     const { theme, size, level } = props;
@@ -30,7 +31,12 @@ export default {
 };
 </script>
 <template>
-  <button class="liui-button" :class="classes" v-bind="$attrs">
+  <button
+    class="liui-button"
+    :disabled="disabled"
+    :class="classes"
+    v-bind="$attrs"
+  >
     <slot></slot>
   </button>
 </template>
@@ -41,6 +47,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .liui-button {
   box-sizing: border-box;
   height: $h;
@@ -143,6 +150,22 @@ $red: red;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+  &.liui-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.liui-theme-link,
+  &.liui-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
