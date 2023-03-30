@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, defineEmits, readonly } from "vue";
+import { readonly } from "vue";
 const props = defineProps({
   value: {
     type: Boolean,
