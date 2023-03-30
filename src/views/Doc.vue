@@ -48,7 +48,6 @@ const menuVisible = inject<Ref<Boolean>>("menuVisible");
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
   }
 }
 
