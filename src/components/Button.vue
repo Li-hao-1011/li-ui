@@ -12,10 +12,46 @@ const onMouse = () => {
 </script>
 <template>
   <div>
-    <h1>Button</h1>
+    <h2>示例1 theme</h2>
     <ButtonUi>你好 </ButtonUi>
     <ButtonUi theme="button">你好 </ButtonUi>
     <ButtonUi theme="link">你好 </ButtonUi>
     <ButtonUi theme="text">你好 </ButtonUi>
+  </div>
+  <div>
+    <h2>示例2 size</h2>
+    <div>
+      <ButtonUi size="big">你好 </ButtonUi>
+      <ButtonUi>你好 </ButtonUi>
+      <ButtonUi size="small">你好 </ButtonUi>
+    </div>
+    <div>
+      <ButtonUi size="big" theme="link">你好 </ButtonUi>
+      <ButtonUi theme="link">你好 </ButtonUi>
+      <ButtonUi size="small" theme="link">你好 </ButtonUi>
+    </div>
+    <div>
+      <ButtonUi size="big" theme="text">你好 </ButtonUi>
+      <ButtonUi theme="text">你好 </ButtonUi>
+      <ButtonUi size="small" theme="text">你好 </ButtonUi>
+    </div>
+  </div>
+  <div>
+    <h2>示例3 level</h2>
+    <div>
+      <ButtonUi level="main">你好 </ButtonUi>
+      <ButtonUi>你好 </ButtonUi>
+      <ButtonUi level="danger">你好 </ButtonUi>
+    </div>
+    <div>
+      <ButtonUi level="main" theme="link">你好 </ButtonUi>
+      <ButtonUi theme="link">你好 </ButtonUi>
+      <ButtonUi level="danger" theme="link">你好 </ButtonUi>
+    </div>
+    <div>
+      <ButtonUi level="main" theme="text">你好 </ButtonUi>
+      <ButtonUi theme="text">你好 </ButtonUi>
+      <ButtonUi level="danger" theme="text">你好 </ButtonUi>
+    </div>
   </div>
 </template>
