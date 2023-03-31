@@ -34,14 +34,14 @@ import ButtonUi from "../lib/ButtonUi.vue";
       <ButtonUi level="danger">危险按钮</ButtonUi>
     </div>
     <div>
-      <ButtonUi level="main" theme="link">主要按钮</ButtonUi>
-      <ButtonUi theme="link">普通按钮</ButtonUi>
-      <ButtonUi level="danger" theme="link">危险按钮</ButtonUi>
+      <ButtonUi level="main" theme="link">主要链接按钮</ButtonUi>
+      <ButtonUi theme="link">普通链接按钮</ButtonUi>
+      <ButtonUi level="danger" theme="link">危险链接按钮</ButtonUi>
     </div>
     <div>
-      <ButtonUi level="main" theme="text">主要按钮</ButtonUi>
-      <ButtonUi theme="text">普通按钮</ButtonUi>
-      <ButtonUi level="danger" theme="text">危险按钮</ButtonUi>
+      <ButtonUi level="main" theme="text">主要文本按钮</ButtonUi>
+      <ButtonUi theme="text">普通文本按钮</ButtonUi>
+      <ButtonUi level="danger" theme="text">危险文本按钮</ButtonUi>
     </div>
   </div>
   <div>
