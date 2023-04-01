@@ -18,8 +18,8 @@ const toggleMenu = () => {
 </template>
 
 <style lang="scss" scoped>
+$color: #00b0a8;
 .topnav {
-  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -29,6 +29,7 @@ const toggleMenu = () => {
   z-index: 10;
   justify-content: center;
   align-items: center;
+  color: $color;
   > .logo {
     max-width: 6em;
     margin-right: auto;
