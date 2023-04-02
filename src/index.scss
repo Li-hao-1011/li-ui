@@ -44,3 +44,14 @@ body {
   fill: currentColor;
   overflow: hidden;
 }
+
+.markdown-body {
+  background-color: #fff;
+  color: #1d2c40;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #dedede;
+  color: #000;
+}
