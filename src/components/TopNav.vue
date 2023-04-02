@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { inject, Ref } from "vue";
+defineProps({
+  toggleMenuButton: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 const menuVisible = inject<Ref<Boolean>>("menuVisible");
 const toggleMenu = () => {
@@ -8,16 +14,21 @@ const toggleMenu = () => {
 </script>
 <template>
   <div class="topnav">
-    <div class="logo">
+    <routerLink to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-kl"></use>
       </svg>
-    </div>
+    </routerLink>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <routerLink to="/doc">文档</routerLink>
+      </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <span v-if="toggleMenuButton" class="toggleAside" @click="toggleMenu">
+      <svg class="icon">
+        <use xlink:href="#icon-menu"></use>
+      </svg>
+    </span>
   </div>
 </template>
 
@@ -55,12 +66,15 @@ $color: #00b0a8;
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: red;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    > svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   @media (max-width: 500px) {
