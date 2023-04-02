@@ -10,7 +10,7 @@ import TopNav from "../components/TopNav.vue";
       <h2>一个基于Vue3的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/Li-hao-1011">GitHub</a>
-        <RouterLink to="/doc">开始</RouterLink>
+        <RouterLink to="/doc/start">开始</RouterLink>
       </p>
     </div>
   </div>

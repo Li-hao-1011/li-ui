@@ -1,3 +1,3 @@
 <template>
-  <div>DocIndex</div>
+  <div>install</div>
 </template>

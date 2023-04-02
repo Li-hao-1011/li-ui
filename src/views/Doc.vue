@@ -9,6 +9,12 @@ const menuVisible = inject<Ref<Boolean>>("menuVisible");
     <top-nav toggle-menu-button />
     <div class="content">
       <aside v-if="menuVisible">
+        <h2>文档</h2>
+        <ol>
+          <li><RouterLink to="/doc/intro">文档介绍</RouterLink></li>
+          <li><RouterLink to="/doc/start">开始</RouterLink></li>
+          <li><RouterLink to="/doc/install">安装</RouterLink></li>
+        </ol>
         <h2>组件列表</h2>
         <ol>
           <li><RouterLink to="/doc/switch">Switch 组件</RouterLink></li>
@@ -54,23 +60,34 @@ const menuVisible = inject<Ref<Boolean>>("menuVisible");
 aside {
   background: lightblue;
   width: 150px;
-  padding: 16px;
+  padding: 16px 0;
 
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
+  z-index: 2;
   > h2 {
     margin-bottom: 4px;
+    padding: 0 16px;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      > a {
+        display: block;
+        padding: 4px 16px;
+        text-indent: 1rem;
+      }
+      .router-link-active {
+        background: #fff;
+        text-decoration: none;
+      }
     }
   }
 }
 main {
   overflow: auto;
+  z-index: 1;
 }
 </style>

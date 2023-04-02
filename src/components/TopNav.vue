@@ -21,7 +21,7 @@ const toggleMenu = () => {
     </routerLink>
     <ul class="menu">
       <li>
-        <routerLink to="/doc">文档</routerLink>
+        <routerLink to="/doc/intro">文档</routerLink>
       </li>
     </ul>
     <span v-if="toggleMenuButton" class="toggleAside" @click="toggleMenu">
@@ -41,7 +41,7 @@ $color: #00b0a8;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   color: $color;

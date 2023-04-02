@@ -4,7 +4,9 @@ import Switch from "./components/Switch.vue";
 import Button from "./components/Button.vue";
 import Dialog from "./components/Dialog.vue";
 import Tabs from "./components/Tabs.vue";
-import DocIndex from './components/DocIndex.vue'
+import Intro from "./views/Intro.vue";
+import GetStart from "./views/GetStart.vue";
+import Install from "./views/Install.vue";
 
 import { createWebHashHistory, createRouter } from "vue-router";
 
@@ -21,7 +23,19 @@ export const router = createRouter({
       children: [
         {
           path: "",
-          component: DocIndex,
+          component: Intro,
+        },
+        {
+          path: "intro",
+          component: Intro,
+        },
+        {
+          path:'start',
+          component: GetStart
+        },
+        {
+          path:'install',
+          component: Install
         },
         {
           path: "switch",
