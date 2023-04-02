@@ -6,13 +6,23 @@ import TopNav from "../components/TopNav.vue";
   <div class="liui-topnav-banner">
     <top-nav></top-nav>
     <div class="banner">
-      <h1>LI-UI</h1>
+      <h1>LI UI</h1>
       <h2>一个基于Vue3的UI组件库</h2>
       <p class="actions">
         <a href="https://github.com/Li-hao-1011">GitHub</a>
-        |
         <RouterLink to="/doc">开始</RouterLink>
       </p>
+    </div>
+    <div class="features">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-light-idea"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -47,6 +57,12 @@ $color: #00b0a8;
           text-decoration: none;
         }
       }
+    }
+  }
+  .features {
+    > svg {
+      width: 64px;
+      height: 64px;
     }
   }
 }

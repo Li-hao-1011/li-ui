@@ -8,7 +8,11 @@ const toggleMenu = () => {
 </script>
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-kl"></use>
+      </svg>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -34,6 +38,10 @@ $color: #00b0a8;
     max-width: 6em;
     margin-right: auto;
     cursor: pointer;
+    > svg {
+      width: 32px;
+      height: 32px;
+    }
   }
   > .menu {
     display: flex;
@@ -65,8 +73,6 @@ $color: #00b0a8;
     > .toggleAside {
       display: inline-block;
     }
-  }
-  @media screen {
   }
 }
 </style>
