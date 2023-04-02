@@ -13,17 +13,17 @@ import TopNav from "../components/TopNav.vue";
         <RouterLink to="/doc">开始</RouterLink>
       </p>
     </div>
-    <div class="features">
-      <svg class="icon">
-        <use xlink:href="#icon-vue"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-ts"></use>
-      </svg>
-      <svg class="icon">
-        <use xlink:href="#icon-light-idea"></use>
-      </svg>
-    </div>
+  </div>
+  <div class="features">
+    <svg class="icon">
+      <use xlink:href="#icon-vue"></use>
+    </svg>
+    <svg class="icon">
+      <use xlink:href="#icon-ts"></use>
+    </svg>
+    <svg class="icon">
+      <use xlink:href="#icon-light-idea"></use>
+    </svg>
   </div>
 </template>
 
@@ -37,6 +37,9 @@ $color: #00b0a8;
     rgba(227, 255, 253, 1) 0%,
     rgba(183, 233, 230, 1) 100%
   );
+  // border-bottom-left-radius: 50% 40px;
+  // border-bottom-right-radius: 50% 40px;
+  clip-path: ellipse(80% 60% at 50% 40%);
   > .banner {
     padding: 100px 0;
     display: flex;
@@ -59,11 +62,11 @@ $color: #00b0a8;
       }
     }
   }
-  .features {
-    > svg {
-      width: 64px;
-      height: 64px;
-    }
+}
+.features {
+  > svg {
+    width: 64px;
+    height: 64px;
   }
 }
 </style>
