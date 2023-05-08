@@ -12,7 +12,8 @@ interface DefaultProps {
 const slots = useSlots();
 const defaults = slots.default?.() as unknown as Array<DefaultProps>;
 defaults.forEach((tag) => {
-  if (tag.type !== Tab) {
+  // @ts-ignore
+  if (tag.type.name !== Tab.name) {
     throw new Error("Tabs 的子组件必须是 Tab");
   }
 });
