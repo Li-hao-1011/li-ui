@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { readonly } from "vue";
 const props = defineProps({
   value: {
     type: Boolean,
@@ -17,64 +16,80 @@ const props = defineProps({
     },
   },
 });
-const emits = defineEmits(["update:value"]);
 
-const switchSize = readonly({
-  large: "14px",
-  default: "18px",
-  small: "24px",
-});
-
+const emit = defineEmits<{
+  (e: "update:value", visible: boolean): void;
+}>();
 const toggle = () => {
-  emits("update:value", !props.value);
+  emit("update:value", !props.value);
 };
 </script>
 <template>
   <button
     class="liui-switch"
-    :disabled="props.disabled"
     @click="toggle"
     :class="{ 'liui-checked': props.value, 'liui-disabled': props.disabled }"
+    :disabled="props.disabled"
   >
-    <!-- <span></span> -->
+    <span></span>
   </button>
 </template>
-
 <style lang="scss">
-$h: v-bind("switchSize[props.size]");
-$h2: calc(#{$h} - 4px);
+@use "sass:math";
+</style>
+<style lang="scss">
+// @use "sass:math";
+
+$h: 22px;
+$h2: $h - 4px;
+
 .liui-switch {
   height: $h;
-  width: calc(#{$h} * 2);
+  width: $h * 2;
   border: none;
-  background: grey;
-  border-radius: calc(#{$h} / 2);
+  background: #bfbfbf;
+  border-radius: math.div($h, 2);
   position: relative;
   cursor: pointer;
-  &:focus {
-    outline: none;
-  }
-  &.liui-checked {
-    background: blue;
-    &::after {
-      left: calc(100% - #{$h2} - 2px);
-    }
-  }
-  &.liui-disabled {
-    cursor: not-allowed;
-    opacity: 0.4;
-  }
-  &::after {
-    content: "";
-    display: inline-block;
+
+  > span {
     position: absolute;
     top: 2px;
     left: 2px;
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: calc(#{$h2} / 2);
-    transition: left 250ms;
+    border-radius: math.div($h2, 2);
+    transition: all 250ms;
+  }
+
+  &.liui-checked {
+    background: blue;
+
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    > span {
+      width: $h2 + 4px;
+    }
+  }
+
+  &.liui-checked:active {
+    > span {
+      width: $h2 + 4px;
+      margin-left: -4px;
+    }
+  }
+  &.liui-disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
   }
 }
 </style>
