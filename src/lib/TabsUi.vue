@@ -41,7 +41,9 @@ const selectedChange = () => {
   indicator.value!.style.width = width + "px";
 };
 onMounted(() => {
-  watchEffect(selectedChange);
+  watchEffect(selectedChange, {
+    flush: "post",
+  });
 });
 </script>
 <template>

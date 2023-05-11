@@ -7,6 +7,7 @@ import Tabs from "./components/Tabs.vue";
 import Intro from "./views/Intro.vue";
 import GetStart from "./views/GetStart.vue";
 import Install from "./views/Install.vue";
+import More from "./views/More.vue";
 
 import { createWebHashHistory, createRouter } from "vue-router";
 
@@ -30,12 +31,12 @@ export const router = createRouter({
           component: Intro,
         },
         {
-          path:'start',
-          component: GetStart
+          path: "start",
+          component: GetStart,
         },
         {
-          path:'install',
-          component: Install
+          path: "install",
+          component: Install,
         },
         {
           path: "switch",
@@ -52,6 +53,10 @@ export const router = createRouter({
         {
           path: "tabs",
           component: Tabs,
+        },
+        {
+          path: "more",
+          component: More,
         },
       ],
     },

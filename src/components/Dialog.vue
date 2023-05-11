@@ -14,7 +14,7 @@ const showDialog = () => {
 </script>
 <template>
   <div>
-    <h2>示例1</h2>
+    <h2>示例1：使用Dialog组件</h2>
     <DialogUi
       v-model:visible="visible"
       :close-on-click-overlay="false"
@@ -23,7 +23,7 @@ const showDialog = () => {
       title="自定义标题"
     >
       <template v-slot:title>
-        <strong>加醋标签</strong>
+        <strong>加粗标签</strong>
       </template>
       <template #content>
         <div>hi1</div>
@@ -41,8 +41,7 @@ const showDialog = () => {
     >
   </div>
   <div>
-    <h2>示例2</h2>
-
-    <Button @click="showDialog">直接打开Dialog</Button>
+    <h2>示例2：使用openDialog</h2>
+    <Button level="main" @click="showDialog">直接打开Dialog</Button>
   </div>
 </template>

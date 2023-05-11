@@ -3,14 +3,17 @@ import { ref } from "vue";
 import SwitchUi from "../lib/SwitchUi.vue";
 const bool = ref(true);
 const bool1 = ref(true);
+const bool2 = ref(false);
 </script>
 <template>
   <div class="switch">
-    <p>disabled: false</p>
+    <h3>示例1：disabled: false</h3>
     <SwitchUi v-model:value="bool1" disabled />
+    <br />
+    <SwitchUi v-model:value="bool2" disabled />
   </div>
   <div class="switch">
-    <p>disabled: true</p>
+    <h3>示例2：disabled: true</h3>
     <SwitchUi :value="bool" @update:value="bool = $event" />
   </div>
 </template>

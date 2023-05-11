@@ -1,6 +1,6 @@
 {
   "name": "li-ui-1",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "files": [
     "dist/lib/*"
   ],

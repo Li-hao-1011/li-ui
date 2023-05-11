@@ -21,6 +21,7 @@ const menuVisible = inject<Ref<Boolean>>("menuVisible");
           <li><RouterLink to="/doc/button">Button 组件</RouterLink></li>
           <li><RouterLink to="/doc/dialog">Dialog 组件</RouterLink></li>
           <li><RouterLink to="/doc/Tabs">Tabs 组件</RouterLink></li>
+          <li><RouterLink to="/doc/more">敬请期待..</RouterLink></li>
         </ol>
       </aside>
       <main>

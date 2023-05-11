@@ -1,7 +1,22 @@
-# Vue 3 + Vite
+# 安装
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+```
+npm i li-ui-1
+```
 
-## Recommended IDE Setup
+或
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```
+yarn add li-ui-1
+```
+
+或
+
+```
+pnpm add li-ui-1
+```
+
+# 使用
+
+1. 导入 css 文件，li-ui-1/dist/lib/\*.css
+2. 组件中使用`import { Button, Switch, Dialog, openDialog, Tabs, Tab } from "li-ui-1";`
